@@ -39,7 +39,7 @@ ul {
 .section {
     min-height: 100vh;
     width: 100%;
-    /* background-color: ${props => props.theme.text}; */
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,26 +47,12 @@ ul {
     overflow: hidden;
 }
 
-/*      */
-/* VARS */
-/*      */
-html {
-    --color-light: '#FCF6F4';
-    --color-dark: '#36254e';
-    --color-lightRgba: '252, 246, 244';
-    --color-darkRgba: '54, 37, 78';
-
-    --ff-title: "Pacifico", cursive;
-    --ff-body: "Truculenta", sans-serif;
-
-    --f-sizeTitle: calc(1em + 1vw);
-    --f-sizeNormal: calc(0.6em + 1vw);
-
-    --transition: all 0.3s ease;
-}
 `;
 
 export default GlobalStyles;
+
+// en section
+// /* background-color: ${props => props.theme.text}; */
 
 // yarn add @fontsource/open-sans // npm install @fontsource/open-sans
 

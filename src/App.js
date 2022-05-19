@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { About, Faq, Footer, Home, Navigation, Showcase } from './sections';
 
 import GlobalStyles from './styles/GlobalStyles';
 import styled from 'styled-components';
@@ -8,16 +8,15 @@ function App() {
       <div>
          <GlobalStyles />
 
-         <Button>hola</Button>
+         <Navigation />
+         <Home />
+         <About />
+         <Showcase />
+         <Faq />
+         <Footer />
       </div>
    );
 }
-
-const Button = styled.button`
-   background-color: var(--color-primary);
-   padding: 3rem;
-   color: white;
-`;
 
 export default App;
 
