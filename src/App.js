@@ -1,7 +1,7 @@
 import { About, Faq, Footer, Home, Navigation, Showcase } from './sections';
+import ScrollToTop from './components/common/ScrollToTop';
 
 import GlobalStyles from './styles/GlobalStyles';
-import styled from 'styled-components';
 
 function App() {
    return (
@@ -14,6 +14,8 @@ function App() {
          <Showcase />
          <Faq />
          <Footer />
+
+         <ScrollToTop />
       </div>
    );
 }
