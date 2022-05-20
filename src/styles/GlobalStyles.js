@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
-import '@fontsource/pacifico';
-import '@fontsource/truculenta';
+import '@fontsource/pacifico'; // ----
+import '@fontsource/truculenta'; //----
+import '@fontsource/amita';
+import '@fontsource/actor';
 
 const GlobalStyles = createGlobalStyle`
 
@@ -11,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body{
-    font-family: 'Sora', sans-serif;
+    font-family: "Actor", sans-serif;
     overflow-x: hidden;
 }
 

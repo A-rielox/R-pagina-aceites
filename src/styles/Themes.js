@@ -4,11 +4,13 @@ export const lightTheme = {
    bodyRgba: '252, 246, 244',
    textRgba: '54, 37, 78',
 
-   ffTitle: '"Pacifico", cursive',
-   ffBody: '"Truculenta", sans-serif',
+   // ffTitle: '"Pacifico", cursive',
+   ffBody: '"Actor", sans-serif',
+   ffTitle: '"Amita", cursive',
 
    fSizeTitle: 'calc(1em + 1vw)',
    fSizeNormal: 'calc(0.6em + 1vw)',
+   fSizeBanner: 'calc(2em + 1vw)',
 
    transition: 'all 0.3s ease',
 

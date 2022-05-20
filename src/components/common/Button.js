@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = ({ text, link }) => {
+const Button = ({ text, link, fontSize, padding }) => {
    return (
       <a href={link} aria-label={text} target="_blank" rel="noreferrer">
-         <Btn>{text}</Btn>
+         <Btn fontSize={fontSize} padding={padding}>
+            {text}
+         </Btn>
       </a>
    );
 };
@@ -19,8 +21,10 @@ const Btn = styled.button`
    outline: none;
    border: none;
 
-   font-size: 1rem;
-   padding: 0.9rem 2.3rem;
+   /* font-size: 1rem; */
+   font-size: ${props => props.fontSize};
+   /* padding: 0.9rem 2.3rem; */
+   padding: ${props => props.padding};
    border-radius: 50px;
    transition: ${props => props.theme.transition};
    position: relative;

@@ -31,9 +31,14 @@ const Navigation = () => {
                   <MenuLink onClick={() => goTo('footer')}>Footer</MenuLink>
                </Menu>
 
-               <ButtonDiv>
-                  <Button text="Únete" link="/" />
-               </ButtonDiv>
+               {/* <ButtonDiv>
+                  <Button
+                     text="Únete"
+                     link="/"
+                     fontSize="1rem"
+                     padding="0.9rem 2.3rem"
+                  />
+               </ButtonDiv> */}
             </Navbar>
          </Section>
       </ThemeProvider>
@@ -113,25 +118,3 @@ const MenuLink = styled.li`
 `;
 
 const ButtonDiv = styled.div``;
-
-/* 
-const MenuLink = styled.li`
-   cursor: pointer;
-
-   margin: 0 1rem;
-   font-size: 1rem;
-
-   &::after {
-      content: ' ';
-      display: block;
-      width: 0;
-      height: 2px;
-      background: ${props => props.theme.text};
-      transition: ${props => props.theme.transition};
-   }
-
-   &:hover::after {
-      width: 100%;
-   }
-`;
-*/
