@@ -4,5 +4,6 @@ import Footer from './Footer';
 import Home from './Home';
 import Navigation from './Navigation';
 import Showcase from './Showcase';
+import WhatAre from './WhatAre';
 
-export { About, Faq, Footer, Home, Navigation, Showcase };
+export { About, Faq, Footer, Home, Navigation, Showcase, WhatAre };

@@ -1,4 +1,5 @@
-import { About, Faq, Footer, Home, Navigation, Showcase } from './sections';
+// prettier-ignore
+import { About, Faq, Footer, Home, Navigation, Showcase, WhatAre } from './sections';
 import ScrollToTop from './components/common/ScrollToTop';
 
 import GlobalStyles from './styles/GlobalStyles';
@@ -10,6 +11,7 @@ function App() {
 
          <Navigation />
          <Home />
+         <WhatAre />
          <About />
          <Showcase />
          <Faq />
