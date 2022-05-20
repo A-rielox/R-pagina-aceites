@@ -9,20 +9,24 @@ const WhatAre = () => {
       <ThemeProvider theme={lightTheme}>
          <Wrapper id="showcase" className="section">
             <Container>
-               <Title>New Collection</Title>
+               <Title>¿Qué son los aceites esenciales?</Title>
 
                <Text>
-                  The brand new collection is currently being developed in USA.
-                  We create our products using best quality material, including
-                  the use of some of the pure fabrics to make our products. All
-                  products are made using the best materials, from the finest
-                  cotton to the finest fabrics.
+                  Los aceites esenciales son extractos vegetales concentrados
+                  cosechados de plantas, hierbas y árboles que luego se destilan
+                  a vapor o se prensan en frío de manera cuidadosa.
                   <br />
                   <br />
-                  We have lots of different clothing options like shoes, jackets
-                  and dresses. Not only clothes but we also provide unique
-                  Jewellery as well. It is great for us to carry our new clothes
-                  all around the country and look different.
+                  Estos aceites esenciales puros son más poderosos y potentes
+                  que los componentes botánicos de los que fueron extraídos, por
+                  lo tanto altamente concentrados para brindar beneficios para
+                  la salud y el bienestar.
+                  <br />
+                  <br />
+                  ¡Ya sea que uses los aceites como aromaterapia, cuidado
+                  personal o como soluciones caseras, encontrarás que cada
+                  aspecto de tu vida conseguirá un impulso con unas cuantas
+                  gotas de aceite esencial!
                </Text>
             </Container>
          </Wrapper>
@@ -47,37 +51,31 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.article`
-   border: 2px solid black;
-
    width: 75%;
-   /* min-height: 100vh; */
+   min-height: 100vh;
    padding-top: 2rem;
    padding-bottom: 2rem;
 
    display: flex;
-   flex-direction: column;
-   /* justify-content: space-between; */
-   /* align-content: center; */
+   justify-content: flex-end;
+   align-items: center;
+
+   position: relative;
 `;
 
 const Title = styled.h2`
    font-family: ${props => props.theme.ffTitle};
    font-size: ${props => props.theme.fSizeBanner};
 
-   /* text-shadow: 1px 1px 1px ${props => props.theme.body}; */
-   /* top: 1rem; */
-   /* left: 5%; */
+   position: absolute;
+   top: 5rem;
+   left: 5%;
 `;
 
 const Text = styled.div`
-   /* width: 35%; */
-
-   /* min-height: 100vh; */
-   /* z-index: 5; */
-
-   /* position: fixed; */
-   /* left: 0; */
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   width: 75%;
+   font-size: ${props => props.theme.fSizeNormal};
+   background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.6)`};
+   padding: 4rem;
+   border-radius: 5px;
 `;
