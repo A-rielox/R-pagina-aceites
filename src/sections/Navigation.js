@@ -88,7 +88,7 @@ const MenuLink = styled.li`
    margin: 0 0.5rem;
    font-size: 1rem;
    position: relative;
-   transition: ${props => props.theme.transition} 0.5s;
+   transition: ${props => props.theme.transition} 0.25s;
    padding: 1rem;
 
    &::after {
@@ -112,7 +112,7 @@ const MenuLink = styled.li`
 
    &:hover::after {
       z-index: -10;
-      animation: ${fill} 1s forwards;
+      animation: ${fill} 0.5s forwards;
       opacity: 1;
    }
 `;

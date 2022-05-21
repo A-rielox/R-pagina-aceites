@@ -7,14 +7,15 @@ import img from '../assets/images/fondo-what-are.jpg';
 const WhatAre = () => {
    return (
       <ThemeProvider theme={lightTheme}>
-         <Wrapper id="showcase" className="section">
+         <Wrapper id="what-are" className="section">
             <Container>
                <Title>¿Qué son los aceites esenciales?</Title>
 
                <Text>
-                  Los aceites esenciales son extractos vegetales concentrados
-                  cosechados de plantas, hierbas y árboles que luego se destilan
-                  a vapor o se prensan en frío de manera cuidadosa.
+                  <span className="firstLetter">L</span>os aceites esenciales
+                  son extractos vegetales concentrados cosechados de plantas,
+                  hierbas y árboles que luego se destilan a vapor o se prensan
+                  en frío de manera cuidadosa.
                   <br />
                   <br />
                   Estos aceites esenciales puros son más poderosos y potentes
@@ -78,4 +79,23 @@ const Text = styled.div`
    background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.6)`};
    padding: 4rem;
    border-radius: 5px;
+
+   letter-spacing: 1px;
+   line-height: 1.75;
+
+   .firstLetter {
+      background: ${props => props.theme.text};
+      color: ${props => props.theme.body};
+      border-radius: 5px;
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-left: 1rem;
+      margin-right: 0.5rem;
+
+      padding: 0.5rem 0.7rem;
+      font-family: ${props => props.theme.ffTitle};
+      line-height: 1;
+      display: inline-block;
+   }
 `;
