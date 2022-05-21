@@ -9,15 +9,17 @@ function App() {
       <div>
          <GlobalStyles />
 
-         <Navigation />
-         <Home />
-         <WhatAre />
-         <About />
-         <Showcase />
-         <Faq />
-         <Footer />
+         <main className="App">
+            <Navigation />
+            <Home />
+            <WhatAre />
+            <About />
+            <Showcase />
+            <Faq />
+            <Footer />
 
-         <ScrollToTop />
+            <ScrollToTop />
+         </main>
       </div>
    );
 }

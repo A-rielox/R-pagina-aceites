@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import '@fontsource/pacifico'; // ----
-import '@fontsource/truculenta'; //----
+
 import '@fontsource/amita';
 import '@fontsource/actor';
 

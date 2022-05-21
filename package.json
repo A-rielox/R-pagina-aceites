@@ -5,11 +5,10 @@
   "dependencies": {
     "@fontsource/actor": "^4.5.7",
     "@fontsource/amita": "^4.5.8",
-    "@fontsource/pacifico": "^4.5.5",
-    "@fontsource/truculenta": "^4.5.7",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "gsap": "^3.10.4",
     "normalize.css": "^8.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
