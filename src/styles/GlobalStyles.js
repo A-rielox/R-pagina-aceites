@@ -35,6 +35,11 @@ ul {
     width: 100%;
     display: block;
     object-fit: cover;
+    max-height: 75vh;
+    border-radius: 15px;
+
+
+
 }
 
 .section {

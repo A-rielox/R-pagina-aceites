@@ -26,6 +26,9 @@ function App() {
 
 export default App;
 
+// yellow
+// NO ESTOY OCUPANDO content.js DE ABOUT
+
 // "normalize.css": "^8.0.1",
 // "react-router-dom": "^6.2.1",
 // "styled-components": "^5.3.3",

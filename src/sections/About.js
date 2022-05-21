@@ -67,18 +67,19 @@ const About = () => {
             <SlidesWrapper ref={horizontalRef}>
                <Slide className="panel" ref={oneSlide}>
                   <div className="left">
-                     <img className="pic" src={mejora} alt="mejora" />
+                     <img className="img" src={mejora} alt="mejora" />
                   </div>
 
                   <div className="right">
                      <div className="title">Mejora Tu Bienestar Físico</div>
 
                      <p className="text">
-                        Los estilos de vida modernos no siempre favorecen las
-                        condiciones óptimas para el bienestar físico. Una dieta
-                        deficiente, la falta de ejercicio y una saturación de
-                        tóxicos ambientales pueden dejar el cuerpo
-                        desequilibrado y disminuir los niveles de energía.
+                        <span className="firstLetter">L</span>os estilos de vida
+                        modernos no siempre favorecen las condiciones óptimas
+                        para el bienestar físico. Una dieta deficiente, la falta
+                        de ejercicio y una saturación de tóxicos ambientales
+                        pueden dejar el cuerpo desequilibrado y disminuir los
+                        niveles de energía.
                      </p>
                      <p className="text">
                         Desde el control del peso hasta el soporte de
@@ -92,20 +93,21 @@ const About = () => {
 
                <Slide className="panel">
                   <div className="left">
-                     <img className="pic" src={purifica} alt="purifica" />
+                     <img className="img" src={purifica} alt="purifica" />
                   </div>
 
                   <div className="right">
                      <div className="title">Purifica tu hogar</div>
 
                      <p className="text">
-                        Los productos que usamos en nuestros hogares impactan
-                        nuestra salud y bienestar. El compromiso de Young Living
-                        con los productos a base de plantas de origen natural
-                        facilita la elección de limpiadores, productos para el
-                        cuidado personal y otros artículos para el hogar
-                        formulados sin el uso de químicos dañinos que se
-                        encuentran en muchos productos tradicionales.
+                        <span className="firstLetter">L</span>os productos que
+                        usamos en nuestros hogares impactan nuestra salud y
+                        bienestar. El compromiso de Young Living con los
+                        productos a base de plantas de origen natural facilita
+                        la elección de limpiadores, productos para el cuidado
+                        personal y otros artículos para el hogar formulados sin
+                        el uso de químicos dañinos que se encuentran en muchos
+                        productos tradicionales.
                      </p>
                      <p className="text">
                         Nos apasiona usar solo los mejores ingredientes que son
@@ -117,18 +119,19 @@ const About = () => {
 
                <Slide className="panel">
                   <div className="left">
-                     <img className="pic" src={realza} alt="realza" />
+                     <img className="img" src={realza} alt="realza" />
                   </div>
 
                   <div className="right">
                      <div className="title">Realza tu rutina de belleza</div>
 
                      <p className="text">
-                        Elimina los ingredientes agresivos de tus productos de
-                        cuidado personal y deja que tu belleza brille. ¡Te
-                        enamorarás de la amplia gama de aceites esenciales que
-                        ayudan a mantener la piel con un aspecto claro, aumentan
-                        la hidratación y te dan ese brillo juvenil! ¡Los aceites
+                        <span className="firstLetter">E</span>limina los
+                        ingredientes agresivos de tus productos de cuidado
+                        personal y deja que tu belleza brille. ¡Te enamorarás de
+                        la amplia gama de aceites esenciales que ayudan a
+                        mantener la piel con un aspecto claro, aumentan la
+                        hidratación y te dan ese brillo juvenil! ¡Los aceites
                         esenciales incluso pueden ayudar a que tu cabello se vea
                         fabuloso!
                      </p>
@@ -167,7 +170,7 @@ const Slide = styled.div`
    }
 
    .right {
-      width: 30%;
+      width: 50%;
 
       display: flex;
       flex-direction: column;
@@ -178,7 +181,10 @@ const Slide = styled.div`
    }
 
    .pic {
-      border-radius: 15px;
+      /* border-radius: 15px; */
+      /* width: 100%; */
+      /* max-height: 75vh; */
+      /* height: auto; */
    }
 
    .title {
@@ -186,11 +192,30 @@ const Slide = styled.div`
       font-size: ${props => props.theme.fSizeBanner};
 
       margin-bottom: 2rem;
+      text-align: right;
    }
 
    .text {
       font-size: ${props => props.theme.fSizeNormal};
       margin-bottom: 1rem;
+      letter-spacing: 1px;
+      line-height: 1.75;
+
+      .firstLetter {
+         background: ${props => props.theme.text};
+         color: ${props => props.theme.body};
+         border-radius: 5px;
+         font-size: 2rem;
+         font-weight: 700;
+         text-transform: uppercase;
+         margin-left: 2rem;
+         margin-right: 0.5rem;
+
+         padding: 0.2rem 0.7rem;
+         font-family: ${props => props.theme.ffTitle};
+         line-height: 1;
+         display: inline-block;
+      }
    }
 `;
 
