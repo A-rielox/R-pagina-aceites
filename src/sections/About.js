@@ -2,7 +2,7 @@ import React, { useRef, useLayoutEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { DarkTheme } from '../styles/Themes';
 
-import content from '../components/about/content';
+// import content from '../components/about/content';
 
 import mejora from '../assets/images/mejora.jpg';
 import purifica from '../assets/images/purifica.jpg';

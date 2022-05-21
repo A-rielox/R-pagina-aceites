@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Logo from '../components/nav-components/Logo';
-import Button from '../components/common/Button';
+// import Button from '../components/common/Button';
 
 import styled, { ThemeProvider, keyframes } from 'styled-components';
 import { lightTheme } from '../styles/Themes';
@@ -117,4 +117,4 @@ const MenuLink = styled.li`
    }
 `;
 
-const ButtonDiv = styled.div``;
+// const ButtonDiv = styled.div``;
