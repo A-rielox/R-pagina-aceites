@@ -43,74 +43,6 @@ const Wrapper = styled.div`
    color: ${props => props.theme.text};
 `;
 
-// const Slide = styled.div`
-//    height: 100vh;
-//    width: 100vw;
-
-//    display: flex;
-//    justify-content: center;
-//    align-items: center;
-
-//    padding: 5rem;
-
-//    .left {
-//       width: 50%;
-
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//    }
-
-//    .right {
-//       width: 50%;
-
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: flex-start;
-//       align-items: center;
-
-//       padding: 2rem;
-//    }
-
-//    .pic {
-//       /* border-radius: 15px; */
-//       /* width: 100%; */
-//       /* max-height: 75vh; */
-//       /* height: auto; */
-//    }
-
-//    .title {
-//       font-family: ${props => props.theme.ffTitle};
-//       font-size: ${props => props.theme.fSizeBanner};
-
-//       margin-bottom: 2rem;
-//       text-align: right;
-//    }
-
-//    .text {
-//       font-size: ${props => props.theme.fSizeNormal};
-//       margin-bottom: 1rem;
-//       letter-spacing: 1px;
-//       line-height: 1.75;
-
-//       .firstLetter {
-//          background: ${props => props.theme.text};
-//          color: ${props => props.theme.body};
-//          border-radius: 5px;
-//          font-size: 2rem;
-//          font-weight: 700;
-//          text-transform: uppercase;
-//          margin-left: 2rem;
-//          margin-right: 0.5rem;
-
-//          padding: 0.2rem 0.7rem;
-//          font-family: ${props => props.theme.ffTitle};
-//          line-height: 1;
-//          display: inline-block;
-//       }
-//    }
-// `;
-
 const Container = styled.article`
    width: 75%;
    min-height: 100vh;
@@ -159,7 +91,7 @@ const Text = styled.div`
 
    letter-spacing: 1px;
    line-height: 1.75;
-   margin-bottom: 4rem;
+   /* margin-bottom: 4rem; */
 
    .firstLetter {
       background: ${props => props.theme.text};
