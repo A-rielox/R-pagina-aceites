@@ -89,8 +89,8 @@ const Wrapper = styled.div`
 `;
 
 const Slide1 = styled.div`
-   min-height: 100vh;
-   min-width: 100vw;
+   height: 100vh;
+   width: 100vw;
    background-color: red;
    display: block;
 `;
@@ -101,6 +101,6 @@ const Slide2 = styled.div`
 `;
 const Slide3 = styled.div`
    height: 100vh;
-   min-width: 100vw;
+   width: 100vw;
    background-color: green;
 `;

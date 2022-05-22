@@ -41,7 +41,7 @@ const About = () => {
             },
 
             height: `${pinWrapWidth}px`,
-            ease: 'none,',
+            ease: 'none',
          });
 
          // Horizontal Scrolling
@@ -54,7 +54,7 @@ const About = () => {
                // markers:true,
             },
             x: -twoSlides,
-            ease: 'none,',
+            ease: 'none',
          });
 
          ScrollTrigger.refresh();
