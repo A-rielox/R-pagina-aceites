@@ -1,15 +1,22 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "normalize.css";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import 'normalize.css';
+import App from './App';
 
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-	<React.StrictMode>
-		<BrowserRouter>
-			<App />
-		</BrowserRouter>
-	</React.StrictMode>
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//    <React.StrictMode>
+//       <BrowserRouter>
+//          <App />
+//       </BrowserRouter>
+//    </React.StrictMode>
+// );
+
+ReactDOM.render(
+   <BrowserRouter>
+      <App />
+   </BrowserRouter>,
+   document.getElementById('root')
 );
