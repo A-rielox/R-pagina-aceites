@@ -1,29 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import cardsContent from './cardsContent';
+// import cardsContent from './cardsContent';
+import Card1 from './Card1';
 
 const Cards = () => {
+   let wrapperRef = useRef(null);
+
+   useEffect(() => {
+      // const card1 = document.querySelector('.card1');
+      // const card2 = document.querySelector('.card2');
+      // const card3 = document.querySelector('.card3');
+      // card1.addEventListener('click', () => {
+      //    console.log('card1');
+      // });
+      // card2.addEventListener('click', () => {
+      //    console.log('card2');
+      // });
+      // card3.addEventListener('click', () => {
+      //    console.log('card3');
+      // });
+   }, []);
+
+   const consoleOut = () => {};
+
    return (
       <Wrapper className="CARDS--WRAPPER">
-         {cardsContent.map(card => {
-            const { id, title, desc, img, svg } = card;
-
-            return (
-               <article key={id} className="service-card">
-                  <span className="service-icon">{svg}</span>
-
-                  <div className="service-info">
-                     <h4>{title}</h4>
-
-                     <p>{desc}</p>
-
-                     {/* <a href="products.html" className="btn service-btn">
-                        read more
-                     </a> */}
-                  </div>
-               </article>
-            );
-         })}
+         <Card1 />
       </Wrapper>
    );
 };
@@ -32,18 +34,16 @@ export default Cards;
 
 const Wrapper = styled.div`
    display: flex;
-   justify-content: space-around;
-   align-items: center;
-
-   cursor: pointer;
    flex-direction: column;
+   /* justify-content: space-around; */
+   /* align-items: center; */
 
+   /* 
    .service-card {
       background: ${props => props.theme.body};
       border-radius: 0.5rem;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       transition: all 0.3s linear;
-      /* overflow: hidden; en lugar de esta pa los bordes superiores de la img, maneja los bordes individuales en .service-img */
 
       width: 100%;
       position: relative;
@@ -85,7 +85,7 @@ const Wrapper = styled.div`
       }
    }
 
-   /* el boton tiene clases por defautl con btn "class="btn service-btn"" y  pa cambiarle usa la otra "service-btn" */
+   
    .service-btn {
       font-size: 0.75rem;
       text-transform: capitalize;
@@ -93,5 +93,5 @@ const Wrapper = styled.div`
       border-radius: 0.5rem;
       font-weight: 400;
       margin-top: 1.25rem;
-   }
+   } */
 `;
