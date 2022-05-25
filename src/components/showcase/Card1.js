@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import gsap from 'gsap';
@@ -8,18 +8,19 @@ import { card1 } from './cardsContent';
 const { id, title, desc1, img, svg, desc2 } = card1;
 
 const Card1 = () => {
+   const [opened, setOpened] = useState(false);
+
+   const [tl] = useState(gsap.timeline({ paused: true }));
+
    let refCard1 = useRef(null);
 
-   let tc1 = gsap.timeline({ paused: true, reversed: true });
+   const animate = e => {
+      tl.reversed(!tl.reversed());
+      setOpened(!opened);
+   };
 
    useEffect(() => {
-      refCard1.addEventListener('click', e => {
-         e.stopPropagation();
-         tc1.play();
-         console.log('click click');
-      });
-
-      tc1.to('.service-card1', {
+      tl.to(refCard1, {
          ease: 'power4.easeInOut',
          width: '100vw',
          height: '100vh',
@@ -29,12 +30,18 @@ const Card1 = () => {
          left: 0,
          margin: 0,
          duration: 0.5,
-      });
+      }).reverse();
    }, []);
 
    return (
       <Article>
-         <div className={`service-card${id}`} ref={el => (refCard1 = el)}>
+         <div
+            className={`service-card${id}`}
+            // onClick={animate}
+            ref={el => (refCard1 = el)}
+         >
+            <div className="background"></div>
+
             <div className="space">
                <span className="service-icon">{svg}</span>
 
@@ -43,11 +50,15 @@ const Card1 = () => {
                   <p className="desc1">{desc1}</p>
 
                   {/* <a href="products.html" className="btn service-btn">
-               read more
-            </a> */}
+                     read more
+                  </a> */}
 
                   {/* <p className="desc2">{desc2}</p> */}
                </div>
+
+               <button onClick={animate}>
+                  {opened === false ? 'leer mas' : 'cerrar'}
+               </button>
             </div>
          </div>
       </Article>
@@ -57,7 +68,18 @@ const Card1 = () => {
 export default Card1;
 
 const Article = styled.article`
-   /* position: relative; */
+   .background {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0%;
+      height: 0%;
+
+      /* disable scroll */
+      height: 100%;
+      overflow: hidden;
+   }
 
    display: flex;
    justify-content: flex-end;
@@ -65,7 +87,9 @@ const Article = styled.article`
 
    .service-card1 {
       width: 30vw;
-      position: absolute;
+      position: relative;
+      top: 0;
+      right: 0;
 
       /*  */
       overflow: hidden;

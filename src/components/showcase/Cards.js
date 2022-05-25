@@ -2,30 +2,15 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 // import cardsContent from './cardsContent';
 import Card1 from './Card1';
+import Card2 from './Card2';
+import Card3 from './Card3';
 
 const Cards = () => {
-   let wrapperRef = useRef(null);
-
-   useEffect(() => {
-      // const card1 = document.querySelector('.card1');
-      // const card2 = document.querySelector('.card2');
-      // const card3 = document.querySelector('.card3');
-      // card1.addEventListener('click', () => {
-      //    console.log('card1');
-      // });
-      // card2.addEventListener('click', () => {
-      //    console.log('card2');
-      // });
-      // card3.addEventListener('click', () => {
-      //    console.log('card3');
-      // });
-   }, []);
-
-   const consoleOut = () => {};
-
    return (
       <Wrapper className="CARDS--WRAPPER">
          <Card1 />
+         <Card2 />
+         <Card3 />
       </Wrapper>
    );
 };
@@ -35,6 +20,9 @@ export default Cards;
 const Wrapper = styled.div`
    display: flex;
    flex-direction: column;
+
+   width: 100%;
+   height: 100%;
    /* justify-content: space-around; */
    /* align-items: center; */
 

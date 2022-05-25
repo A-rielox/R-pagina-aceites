@@ -19,7 +19,7 @@ const Showcase = () => {
                   </Left>
 
                   <Right className="RIGHT">
-                     <Text>
+                     <Text className="TEXT--WRIGHT">
                         <span className="firstLetter">C</span>on tantos aceites
                         esenciales a su alcance que tienen tantos usos posibles,
                         seguramente se preguntará cómo usarlos todos. No se
@@ -54,8 +54,6 @@ const Container = styled.article`
    display: flex;
    justify-content: center;
    align-items: center;
-
-   /* position: relative; */
 `;
 
 const Title = styled.h2`
@@ -78,7 +76,7 @@ const Left = styled.div`
 const Right = styled.div`
    width: 50%;
    display: flex;
-   /* flex-direction: column; */
+   flex-direction: column;
    align-items: flex-start;
 
    margin-left: 2rem;
