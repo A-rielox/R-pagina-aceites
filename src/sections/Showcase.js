@@ -1,19 +1,13 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 
 import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme } from '../styles/Themes';
 
 import comoUsar from '../assets/images/como-usar.jpg';
-import Cards from '../components/showcase/Cards';
+import content from '../components/showcase/cardsContent';
+import Card from '../components/showcase/Card';
 
 const Showcase = () => {
-   const [textRef, setTextRef] = useState(null);
-   let ref = useRef(null);
-
-   useEffect(() => {
-      setTextRef(ref.current);
-   }, [textRef]);
-
    return (
       <ThemeProvider theme={lightTheme}>
          <Wrapper id="showcase" className="section">
@@ -26,7 +20,7 @@ const Showcase = () => {
                   </Left>
 
                   <Right className="RIGHT">
-                     <Text className="TEXT--WRIGHT" ref={ref}>
+                     <Text className="TEXT--WRIGHT">
                         <span className="firstLetter">C</span>on tantos aceites
                         esenciales a su alcance que tienen tantos usos posibles,
                         seguramente se preguntará cómo usarlos todos. No se
@@ -34,7 +28,9 @@ const Showcase = () => {
                         poco tiempo!
                      </Text>
 
-                     <Cards textRef={textRef} />
+                     {content.map(card => {
+                        return <Card cardContent={card} key={card.id} />;
+                     })}
                   </Right>
                </Content>
             </Container>
