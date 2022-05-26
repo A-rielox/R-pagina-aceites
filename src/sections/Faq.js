@@ -6,6 +6,9 @@ import { DarkTheme } from '../styles/Themes';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import content from '../components/showcase/cardsContent';
+import Content from '../components/faq/Content';
+
 const Faq = () => {
    const slide1Ref = useRef(null);
    const slide2Ref = useRef(null);
@@ -64,15 +67,15 @@ const Faq = () => {
       <ThemeProvider theme={DarkTheme}>
          <Wrapper id="faq" className="section">
             <Slide1 ref={slide1Ref}>
-               <h1>slide1</h1>
+               <Content useTheme="dark" thecontent={content[0]} />
             </Slide1>
 
             <Slide2 ref={slide2Ref}>
-               <h1>slide2</h1>
+               <Content useTheme="light" thecontent={content[1]} />
             </Slide2>
 
             <Slide3 ref={slide3Ref}>
-               <h1>slide3</h1>
+               <Content useTheme="dark" thecontent={content[2]} />
             </Slide3>
          </Wrapper>
       </ThemeProvider>
@@ -82,25 +85,25 @@ const Faq = () => {
 export default Faq;
 
 const Wrapper = styled.div`
-   background-color: ${props => props.theme.body};
-   color: ${props => props.theme.text};
-
    flex-direction: column;
 `;
 
 const Slide1 = styled.div`
    height: 100vh;
    width: 100vw;
-   background-color: red;
    display: block;
+   color: ${props => props.theme.text};
+   background-color: ${props => props.theme.body};
 `;
 const Slide2 = styled.div`
    height: 100vh;
    min-width: 100vw;
-   background-color: blue;
+   background-color: ${props => props.theme.text};
+   color: ${props => props.theme.body};
 `;
 const Slide3 = styled.div`
    height: 100vh;
    width: 100vw;
-   background-color: green;
+   color: ${props => props.theme.text};
+   background-color: ${props => props.theme.body};
 `;

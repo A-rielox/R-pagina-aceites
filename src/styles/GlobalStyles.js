@@ -37,9 +37,6 @@ ul {
     object-fit: cover;
     max-height: 65vh;
     border-radius: 15px;
-
-
-
 }
 
 .section {

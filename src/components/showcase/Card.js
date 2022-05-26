@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Cards = ({ cardContent }) => {
-   console.log(cardContent);
    const { id, title, desc1, svg } = cardContent;
 
    return (
