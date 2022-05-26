@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme } from '../styles/Themes';
@@ -7,6 +7,13 @@ import comoUsar from '../assets/images/como-usar.jpg';
 import Cards from '../components/showcase/Cards';
 
 const Showcase = () => {
+   const [textRef, setTextRef] = useState(null);
+   let ref = useRef(null);
+
+   useEffect(() => {
+      setTextRef(ref.current);
+   }, [textRef]);
+
    return (
       <ThemeProvider theme={lightTheme}>
          <Wrapper id="showcase" className="section">
@@ -19,7 +26,7 @@ const Showcase = () => {
                   </Left>
 
                   <Right className="RIGHT">
-                     <Text className="TEXT--WRIGHT">
+                     <Text className="TEXT--WRIGHT" ref={ref}>
                         <span className="firstLetter">C</span>on tantos aceites
                         esenciales a su alcance que tienen tantos usos posibles,
                         seguramente se preguntará cómo usarlos todos. No se
@@ -27,7 +34,7 @@ const Showcase = () => {
                         poco tiempo!
                      </Text>
 
-                     <Cards />
+                     <Cards textRef={textRef} />
                   </Right>
                </Content>
             </Container>
@@ -63,6 +70,7 @@ const Title = styled.h2`
    position: absolute;
    top: 5rem;
    left: 5%;
+   /* z-index: 1; */
 `;
 
 const Content = styled.div`
