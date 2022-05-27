@@ -41,6 +41,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
    width: 75%;
+   max-width: 1300px;
    min-height: 80vh; // 🔔
    margin: 0 auto;
    /* background-color: #e6c4ad; */

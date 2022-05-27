@@ -53,6 +53,7 @@ const Wrapper = styled.div`
 
 const Container = styled.article`
    width: 75%;
+   max-width: 1300px;
    min-height: 100vh;
    padding-top: 2rem;
    padding-bottom: 2rem;

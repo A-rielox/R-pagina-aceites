@@ -30,6 +30,7 @@ const TypeWriter = () => {
 
          <ButtonDiv>
             <Button
+               useTheme="dark"
                text="Únete"
                link="/"
                fontSize="2rem"

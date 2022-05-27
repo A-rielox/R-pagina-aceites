@@ -8,9 +8,9 @@ export const lightTheme = {
    ffBody: '"Actor", sans-serif',
    ffTitle: '"Amita", cursive',
 
-   fSizeTitle: 'calc(1em + 1vw)',
-   fSizeNormal: 'calc(0.6em + 0.5vw)',
-   fSizeBanner: 'calc(2em + 1vw)',
+   fSizeTitle: 'calc(1rem + 1vw)',
+   fSizeNormal: 'calc(0.6rem + 0.5vw)',
+   fSizeBanner: 'calc(2rem + 1vw)',
 
    transition: 'all 0.3s ease',
 
@@ -26,9 +26,9 @@ export const DarkTheme = {
    ffBody: '"Actor", sans-serif',
    ffTitle: '"Amita", cursive',
 
-   fSizeTitle: 'calc(1em + 1vw)',
-   fSizeNormal: 'calc(0.6em + 0.5vw)',
-   fSizeBanner: 'calc(2em + 1vw)',
+   fSizeTitle: 'calc(1rem + 1vw)',
+   fSizeNormal: 'calc(0.6rem + 0.5vw)',
+   fSizeBanner: 'calc(2rem + 1vw)',
 
    transition: 'all 0.3s ease',
 

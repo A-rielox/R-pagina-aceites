@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Logo from '../components/nav-components/Logo';
+import Logo from '../components/common/Logo';
 // import Button from '../components/common/Button';
 
 import styled, { ThemeProvider, keyframes } from 'styled-components';
@@ -69,6 +69,7 @@ const Section = styled.section`
 
 const Navbar = styled.nav`
    width: 85%;
+   max-width: 1300px;
    margin: 0 auto;
    height: ${props => props.theme.navHeight};
 
