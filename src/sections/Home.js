@@ -3,8 +3,9 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme } from '../styles/Themes';
 
-import Slider from '../components/hone/Slider';
+// import Slider from '../components/hone/Slider';
 import TypeWriter from '../components/hone/TypeWriter';
+import HeroImages from '../components/hone/HeroImages';
 
 const Home = () => {
    return (
@@ -16,7 +17,8 @@ const Home = () => {
                </Box>
 
                <Box className="slider-box">
-                  <Slider />
+                  {/* <Slider /> */}
+                  <HeroImages />
                </Box>
             </Container>
          </Wrapper>
@@ -50,7 +52,11 @@ const Container = styled.div`
    justify-content: center;
    align-items: center;
 
+   overflow: hidden;
+
    .slider-box {
+      height: ${props => `calc(100vh - ${props.theme.navHeight})`};
+      position: relative;
       @media screen and (max-width: 900px) {
          display: none;
       }
@@ -63,6 +69,7 @@ const Container = styled.div`
 
 const Box = styled.div`
    width: 50%;
+   height: 100%;
    // min-height: 80vh; // 🔔
    display: flex;
    flex-direction: column;

@@ -1,12 +1,63 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import gsap from 'gsap';
 
 import Logo from '../components/common/Logo';
-// import Button from '../components/common/Button';
 
 import styled, { ThemeProvider, keyframes } from 'styled-components';
 import { lightTheme } from '../styles/Themes';
 
 const Navigation = () => {
+   let logoRef = useRef(null);
+   let elementRef1 = useRef(null);
+   let elementRef2 = useRef(null);
+   let elementRef3 = useRef(null);
+   let elementRef4 = useRef(null);
+   let elementRef5 = useRef(null);
+
+   let tl3 = gsap.timeline();
+
+   useEffect(() => {
+      tl3.to('.nav', { visibility: 'visible' }, 0.5)
+         .from(
+            logoRef,
+            {
+               x: -150,
+               ease: 'power2',
+               duration: 0.3,
+            },
+            'Start'
+         )
+         .from(
+            elementRef1,
+            {
+               x: -150,
+               ease: 'power2',
+               duration: 0.3,
+            },
+            'Start'
+         )
+         .from(elementRef2, {
+            x: -150,
+            ease: 'power2',
+            duration: 0.3,
+         })
+         .from(elementRef3, {
+            x: -150,
+            ease: 'power2',
+            duration: 0.3,
+         })
+         .from(elementRef4, {
+            x: -150,
+            ease: 'power2',
+            duration: 0.3,
+         })
+         .from(elementRef5, {
+            x: -150,
+            ease: 'power2',
+            duration: 0.3,
+         });
+   }, []);
+
    const goTo = id => {
       let section = document.getElementById(id);
 
@@ -20,25 +71,59 @@ const Navigation = () => {
    return (
       <ThemeProvider theme={lightTheme}>
          <Section id="navigation">
-            <Navbar>
-               <Logo />
+            <Navbar className="nav">
+               <div className="element-wrapper">
+                  <div className="logo" ref={el => (logoRef = el)}>
+                     <Logo />
+                  </div>
+               </div>
 
                <Menu>
-                  <MenuLink onClick={() => goTo('home')}>Home</MenuLink>
-                  <MenuLink onClick={() => goTo('about')}>About</MenuLink>
-                  <MenuLink onClick={() => goTo('showcase')}>Showcase</MenuLink>
-                  <MenuLink onClick={() => goTo('faq')}>FAQ</MenuLink>
-                  <MenuLink onClick={() => goTo('footer')}>Footer</MenuLink>
-               </Menu>
+                  <div className="element-wrapper">
+                     <MenuLink
+                        onClick={() => goTo('home')}
+                        ref={el => (elementRef1 = el)}
+                     >
+                        Home
+                     </MenuLink>
+                  </div>
 
-               {/* <ButtonDiv>
-                  <Button
-                     text="Únete"
-                     link="/"
-                     fontSize="1rem"
-                     padding="0.9rem 2.3rem"
-                  />
-               </ButtonDiv> */}
+                  <div className="element-wrapper">
+                     <MenuLink
+                        onClick={() => goTo('about')}
+                        ref={el => (elementRef2 = el)}
+                     >
+                        About
+                     </MenuLink>
+                  </div>
+
+                  <div className="element-wrapper">
+                     <MenuLink
+                        onClick={() => goTo('showcase')}
+                        ref={el => (elementRef3 = el)}
+                     >
+                        Showcase
+                     </MenuLink>
+                  </div>
+
+                  <div className="element-wrapper">
+                     <MenuLink
+                        onClick={() => goTo('faq')}
+                        ref={el => (elementRef4 = el)}
+                     >
+                        FAQ
+                     </MenuLink>
+                  </div>
+
+                  <div className="element-wrapper">
+                     <MenuLink
+                        onClick={() => goTo('footer')}
+                        ref={el => (elementRef5 = el)}
+                     >
+                        Footer
+                     </MenuLink>
+                  </div>
+               </Menu>
             </Navbar>
          </Section>
       </ThemeProvider>
@@ -65,6 +150,9 @@ const fill = keyframes`
 const Section = styled.section`
    background-color: ${props => props.theme.body};
    color: ${props => props.theme.text};
+   .nav {
+      visibility: hidden;
+   }
 `;
 
 const Navbar = styled.nav`
@@ -76,6 +164,10 @@ const Navbar = styled.nav`
    display: flex;
    justify-content: space-between;
    align-items: center;
+
+   .element-wrapper {
+      overflow: hidden;
+   }
 `;
 
 const Menu = styled.ul`
@@ -122,5 +214,3 @@ const MenuLink = styled.li`
       opacity: 1;
    }
 `;
-
-// const ButtonDiv = styled.div``;
