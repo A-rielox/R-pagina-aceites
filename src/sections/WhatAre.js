@@ -59,7 +59,8 @@ const Container = styled.article`
    padding-bottom: 2rem;
 
    display: flex;
-   justify-content: flex-end;
+   flex-direction: column;
+   justify-content: center;
    align-items: center;
 
    position: relative;
@@ -69,9 +70,7 @@ const Title = styled.h2`
    font-family: ${props => props.theme.ffTitle};
    font-size: ${props => props.theme.fSizeBanner};
 
-   position: absolute;
-   top: 5rem;
-   left: 0;
+   align-self: flex-start;
 `;
 
 const Text = styled.div`
@@ -83,6 +82,17 @@ const Text = styled.div`
 
    letter-spacing: 1px;
    line-height: 1.75;
+
+   align-self: flex-end;
+   margin-top: 2rem;
+
+   @media screen and (max-width: 1100px) {
+      padding: 2rem;
+   }
+
+   @media screen and (max-width: 600px) {
+      width: 100%;
+   }
 
    .firstLetter {
       background: ${props => props.theme.text};

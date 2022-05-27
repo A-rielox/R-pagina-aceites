@@ -41,11 +41,15 @@ const Slide = styled.div`
    /* padding: 5rem; */
 
    .left {
-      width: 50%;
+      width: 30%;
 
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media screen and (max-width: 900px) {
+         display: none;
+      }
    }
 
    .right {
@@ -53,11 +57,15 @@ const Slide = styled.div`
       flex-direction: column;
       justify-content: flex-start;
 
-      width: 50%;
+      width: 70%;
       align-items: center;
       padding: 2rem;
 
       position: relative;
+
+      @media screen and (min-width: 1100px) {
+         padding-left: 4rem;
+      }
    }
 
    .title-wrapper {

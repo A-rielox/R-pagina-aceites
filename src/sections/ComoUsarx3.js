@@ -95,12 +95,17 @@ const Wrapper = styled.div`
    flex-direction: column;
 
    .cap-width {
+      width: 75%;
       max-width: 1300px;
       margin: 0 auto;
 
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media screen and (max-width: 700px) {
+         width: 100%;
+      }
    }
 `;
 

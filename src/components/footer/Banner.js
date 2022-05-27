@@ -12,7 +12,7 @@ import Button from '../common/Button';
 
 const Banner = () => {
    return (
-      <Wrapper>
+      <Wrapper className="BANNERRR">
          <OilPictures>
             <img width={500} height={400} src={img1} alt="The Weirdos" />
             <img width={500} height={400} src={img2} alt="The Weirdos" />
@@ -58,6 +58,10 @@ const Wrapper = styled.section`
 
    overflow: hidden;
 
+   @media screen and (max-width: 1100px) {
+      height: 40vh;
+   }
+
    .cap-width {
       width: 100%;
       max-width: 1300px;
@@ -66,9 +70,13 @@ const Wrapper = styled.section`
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @media screen and (max-width: 600px) {
+         flex-direction: column;
+      }
    }
 
-   @media (max-width: 48em) {
+   @media screen and (max-width: 600px) {
       height: 15rem;
       flex-direction: column;
    }
@@ -91,7 +99,7 @@ const OilPictures = styled.div`
       height: auto;
    }
 
-   @media (max-width: 48em) {
+   @media screen and (max-width: 600px) {
       img {
          width: 10rem;
          height: auto;
@@ -109,12 +117,12 @@ const Title = styled.h2`
 
    text-shadow: 1px 1px 2px ${props => props.theme.text};
 
-   @media (max-width: 64em) {
+   @media screen and (max-width: 900) {
       font-size: ${props => props.theme.fSizeTitle};
       text-align: center;
       /* width: 40%; */
    }
-   @media (max-width: 48em) {
+   @media screen and (max-width: 600) {
       font-size: ${props => props.theme.fSizeNormal};
       padding: 2rem 0;
 
@@ -126,4 +134,7 @@ const ButtonDiv = styled.div`
    width: 30%;
    margin-top: 2rem;
    text-align: center;
+
+   @media screen and (max-width: 900) {
+   }
 `;

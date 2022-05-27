@@ -52,6 +52,10 @@ const Wrapper = styled.div`
    height: 100%;
    display: inline-block;
 
+   /* @media screen and (max-width: 900px) {
+      display: none;
+   } */
+
    article {
       position: absolute;
       top: 50%;

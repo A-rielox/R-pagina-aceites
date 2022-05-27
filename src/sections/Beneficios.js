@@ -179,15 +179,19 @@ const Slide = styled.div`
    }
 
    .left {
-      width: 50%;
+      width: 30%;
 
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media screen and (max-width: 900px) {
+         display: none;
+      }
    }
 
    .right {
-      width: 50%;
+      width: 70%;
 
       display: flex;
       flex-direction: column;
@@ -195,6 +199,14 @@ const Slide = styled.div`
       align-items: center;
 
       padding: 2rem;
+
+      @media screen and (min-width: 1100px) {
+         padding-left: 4rem;
+      }
+
+      @media screen and (max-width: 700px) {
+         width: 100%;
+      }
    }
 
    .pic {

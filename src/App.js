@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // prettier-ignore
-import { About, Faq, Footer, Home, Navigation, Showcase, WhatAre } from './sections';
+import { Beneficios, ComoUsarx3, Footer, Home, Navigation, ComoUsar, WhatAre } from './sections';
 import ScrollToTop from './components/common/ScrollToTop';
 
 import GlobalStyles from './styles/GlobalStyles';
@@ -28,9 +28,9 @@ function App() {
             <Navigation />
             <Home />
             <WhatAre />
-            <About />
-            <Showcase />
-            <Faq />
+            <Beneficios />
+            <ComoUsar />
+            <ComoUsarx3 />
             <Footer />
 
             <ScrollToTop />

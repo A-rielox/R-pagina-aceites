@@ -18,6 +18,10 @@ const Wrapper = styled.h2`
 
    transition: ${props => props.theme.transition};
 
+   @media screen and (max-width: 900px) {
+      font-size: calc(1.5em + 1vw);
+   }
+
    &:hover {
       transform: scale(1.1);
    }

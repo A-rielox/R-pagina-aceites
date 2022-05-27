@@ -27,7 +27,8 @@ const Wrapper = styled.div`
    justify-content: flex-end;
    align-items: center;
    width: 100%;
-   height: 100%;
+   max-width: 347px;
+   /* height: 100%; */
 
    .service-card {
       width: 100%;
@@ -35,6 +36,10 @@ const Wrapper = styled.div`
       justify-content: center;
       align-items: center;
       padding: 1rem;
+
+      @media screen and (max-width: 1100px) {
+         padding: 1rem 0 0 0;
+      }
    }
 
    .space {

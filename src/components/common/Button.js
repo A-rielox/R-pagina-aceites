@@ -24,7 +24,7 @@ const Btn = styled.button`
    border: none;
 
    /* font-size: 1rem; */
-   font-size: ${props => props.fontSize};
+   font-size: ${props => props.fontSize.fSizeTitle};
    /* padding: 0.9rem 2.3rem; */
    padding: ${props => props.padding};
    border-radius: 50px;

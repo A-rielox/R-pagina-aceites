@@ -51,6 +51,10 @@ const Wrapper = styled.article`
    color: ${props => props.theme.text};
    align-self: flex-start;
 
+   @media screen and (max-width: 900px) {
+      font-size: ${props => props.theme.fSizeTitle};
+   }
+
    span {
       font-family: ${props => props.theme.ffTitle};
    }
@@ -67,6 +71,10 @@ const Wrapper = styled.article`
 
 const Title = styled.h2`
    margin-bottom: 2rem;
+
+   @media screen and (max-width: 900px) {
+      font-size: ${props => props.theme.fSizeBanner};
+   }
 `;
 
 const ButtonDiv = styled.div`

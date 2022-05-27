@@ -1,9 +1,9 @@
-import About from './About';
-import Faq from './Faq';
+import Beneficios from './Beneficios';
+import ComoUsarx3 from './ComoUsarx3';
 import Footer from './Footer';
 import Home from './Home';
 import Navigation from './Navigation';
-import Showcase from './Showcase';
+import ComoUsar from './ComoUsar';
 import WhatAre from './WhatAre';
 
-export { About, Faq, Footer, Home, Navigation, Showcase, WhatAre };
+export { Beneficios, ComoUsarx3, Footer, Home, Navigation, ComoUsar, WhatAre };

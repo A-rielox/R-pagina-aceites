@@ -92,6 +92,11 @@ const MenuLink = styled.li`
    transition: ${props => props.theme.transition} 0.25s;
    padding: 1rem;
 
+   @media screen and (max-width: 900px) {
+      margin: 0 0.2rem;
+      padding: 0.5rem;
+   }
+
    &::after {
       content: ' ';
       position: absolute;

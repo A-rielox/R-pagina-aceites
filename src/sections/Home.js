@@ -49,6 +49,16 @@ const Container = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
+
+   .slider-box {
+      @media screen and (max-width: 900px) {
+         display: none;
+      }
+   }
+
+   @media screen and (max-width: 900px) {
+      width: 100%;
+   }
 `;
 
 const Box = styled.div`
