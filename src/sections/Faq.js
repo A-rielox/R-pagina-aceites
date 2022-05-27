@@ -67,15 +67,21 @@ const Faq = () => {
       <ThemeProvider theme={DarkTheme}>
          <Wrapper id="faq" className="section">
             <Slide1 ref={slide1Ref}>
-               <Content useTheme="dark" thecontent={content[0]} />
+               <div className="cap-width">
+                  <Content useTheme="dark" thecontent={content[0]} />
+               </div>
             </Slide1>
 
             <Slide2 ref={slide2Ref}>
-               <Content useTheme="light" thecontent={content[1]} />
+               <div className="cap-width">
+                  <Content useTheme="light" thecontent={content[1]} />
+               </div>
             </Slide2>
 
             <Slide3 ref={slide3Ref}>
-               <Content useTheme="dark" thecontent={content[2]} />
+               <div className="cap-width">
+                  <Content useTheme="dark" thecontent={content[2]} />
+               </div>
             </Slide3>
          </Wrapper>
       </ThemeProvider>
@@ -83,9 +89,19 @@ const Faq = () => {
 };
 
 export default Faq;
+/* max-width: 1300px; */
 
 const Wrapper = styled.div`
    flex-direction: column;
+
+   .cap-width {
+      max-width: 1300px;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
 `;
 
 const Slide1 = styled.div`

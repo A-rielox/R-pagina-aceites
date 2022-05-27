@@ -71,7 +71,7 @@ const Title = styled.h2`
 
    position: absolute;
    top: 5rem;
-   left: 5%;
+   left: 0;
 `;
 
 const Text = styled.div`

@@ -91,6 +91,7 @@ const Wrapper = styled.div`
 
 const Container = styled.article`
    width: 75%;
+   max-width: 1300px;
    padding-top: 2rem;
    padding-bottom: 2rem;
    margin: 2rem auto;
@@ -154,6 +155,7 @@ const MenuLink = styled.li`
 
 const Bottom = styled.div`
    width: 75%;
+   max-width: 1300px;
    margin: 0 auto;
    display: flex;
    justify-content: space-between;

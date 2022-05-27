@@ -66,81 +66,87 @@ const About = () => {
          <Wrapper id="about" ref={ref}>
             <SlidesWrapper ref={horizontalRef}>
                <Slide className="panel" ref={oneSlide}>
-                  <div className="left">
-                     <img className="img" src={mejora} alt="mejora" />
-                  </div>
+                  <div className="cap-width">
+                     <div className="left">
+                        <img className="img" src={mejora} alt="mejora" />
+                     </div>
 
-                  <div className="right">
-                     <div className="title">Mejora Tu Bienestar Físico</div>
+                     <div className="right">
+                        <div className="title">Mejora Tu Bienestar Físico</div>
 
-                     <p className="text">
-                        <span className="firstLetter">L</span>os estilos de vida
-                        modernos no siempre favorecen las condiciones óptimas
-                        para el bienestar físico. Una dieta deficiente, la falta
-                        de ejercicio y una saturación de tóxicos ambientales
-                        pueden dejar el cuerpo desequilibrado y disminuir los
-                        niveles de energía.
-                     </p>
-                     <p className="text">
-                        Desde el control del peso hasta el soporte de
-                        suplementos, nuestros aceites esenciales y productos
-                        enriquecidos con aceites esenciales pueden proporcionar
-                        las soluciones específicas que necesitas para
-                        restablecer el equilibrio y sentirte mejor.
-                     </p>
-                  </div>
-               </Slide>
-
-               <Slide className="panel">
-                  <div className="left">
-                     <img className="img" src={purifica} alt="purifica" />
-                  </div>
-
-                  <div className="right">
-                     <div className="title">Purifica tu hogar</div>
-
-                     <p className="text">
-                        <span className="firstLetter">L</span>os productos que
-                        usamos en nuestros hogares impactan nuestra salud y
-                        bienestar. El compromiso de Young Living con los
-                        productos a base de plantas de origen natural facilita
-                        la elección de limpiadores, productos para el cuidado
-                        personal y otros artículos para el hogar formulados sin
-                        el uso de químicos dañinos que se encuentran en muchos
-                        productos tradicionales.
-                     </p>
-                     <p className="text">
-                        Nos apasiona usar solo los mejores ingredientes que son
-                        buenos para la salud y responsables con el medio
-                        ambiente, y a la misma vez efectivos.
-                     </p>
+                        <p className="text">
+                           <span className="firstLetter">L</span>os estilos de
+                           vida modernos no siempre favorecen las condiciones
+                           óptimas para el bienestar físico. Una dieta
+                           deficiente, la falta de ejercicio y una saturación de
+                           tóxicos ambientales pueden dejar el cuerpo
+                           desequilibrado y disminuir los niveles de energía.
+                        </p>
+                        <p className="text">
+                           Desde el control del peso hasta el soporte de
+                           suplementos, nuestros aceites esenciales y productos
+                           enriquecidos con aceites esenciales pueden
+                           proporcionar las soluciones específicas que necesitas
+                           para restablecer el equilibrio y sentirte mejor.
+                        </p>
+                     </div>
                   </div>
                </Slide>
 
                <Slide className="panel">
-                  <div className="left">
-                     <img className="img" src={realza} alt="realza" />
+                  <div className="cap-width">
+                     <div className="left">
+                        <img className="img" src={purifica} alt="purifica" />
+                     </div>
+
+                     <div className="right">
+                        <div className="title">Purifica tu hogar</div>
+
+                        <p className="text">
+                           <span className="firstLetter">L</span>os productos
+                           que usamos en nuestros hogares impactan nuestra salud
+                           y bienestar. El compromiso de Young Living con los
+                           productos a base de plantas de origen natural
+                           facilita la elección de limpiadores, productos para
+                           el cuidado personal y otros artículos para el hogar
+                           formulados sin el uso de químicos dañinos que se
+                           encuentran en muchos productos tradicionales.
+                        </p>
+                        <p className="text">
+                           Nos apasiona usar solo los mejores ingredientes que
+                           son buenos para la salud y responsables con el medio
+                           ambiente, y a la misma vez efectivos.
+                        </p>
+                     </div>
                   </div>
+               </Slide>
 
-                  <div className="right">
-                     <div className="title">Realza tu rutina de belleza</div>
+               <Slide className="panel">
+                  <div className="cap-width">
+                     <div className="left">
+                        <img className="img" src={realza} alt="realza" />
+                     </div>
 
-                     <p className="text">
-                        <span className="firstLetter">E</span>limina los
-                        ingredientes agresivos de tus productos de cuidado
-                        personal y deja que tu belleza brille. ¡Te enamorarás de
-                        la amplia gama de aceites esenciales que ayudan a
-                        mantener la piel con un aspecto claro, aumentan la
-                        hidratación y te dan ese brillo juvenil! ¡Los aceites
-                        esenciales incluso pueden ayudar a que tu cabello se vea
-                        fabuloso!
-                     </p>
-                     <p className="text">
-                        Utilizando ingredientes de origen natural, nuestras
-                        soluciones avanzadas para el cuidado de la piel y el
-                        cabello facilitan el disfrute de los hermosos beneficios
-                        de los aceites esenciales todos los días.
-                     </p>
+                     <div className="right">
+                        <div className="title">Realza tu rutina de belleza</div>
+
+                        <p className="text">
+                           <span className="firstLetter">E</span>limina los
+                           ingredientes agresivos de tus productos de cuidado
+                           personal y deja que tu belleza brille. ¡Te enamorarás
+                           de la amplia gama de aceites esenciales que ayudan a
+                           mantener la piel con un aspecto claro, aumentan la
+                           hidratación y te dan ese brillo juvenil! ¡Los aceites
+                           esenciales incluso pueden ayudar a que tu cabello se
+                           vea fabuloso!
+                        </p>
+                        <p className="text">
+                           Utilizando ingredientes de origen natural, nuestras
+                           soluciones avanzadas para el cuidado de la piel y el
+                           cabello facilitan el disfrute de los hermosos
+                           beneficios de los aceites esenciales todos los días.
+                        </p>
+                     </div>
                   </div>
                </Slide>
             </SlidesWrapper>
@@ -151,6 +157,8 @@ const About = () => {
 
 export default About;
 
+/* max-width: 1300px; */
+
 const Slide = styled.div`
    height: 100vh;
    width: 100vw;
@@ -160,6 +168,15 @@ const Slide = styled.div`
    align-items: center;
 
    padding: 5rem;
+
+   .cap-width {
+      max-width: 1300px;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
 
    .left {
       width: 50%;

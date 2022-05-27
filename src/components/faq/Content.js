@@ -38,7 +38,7 @@ const Slide = styled.div`
    justify-content: center;
    align-items: center;
 
-   padding: 5rem;
+   /* padding: 5rem; */
 
    .left {
       width: 50%;

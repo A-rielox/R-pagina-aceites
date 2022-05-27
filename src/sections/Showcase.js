@@ -44,12 +44,11 @@ export default Showcase;
 const Wrapper = styled.div`
    background-color: ${props => props.theme.body};
    color: ${props => props.theme.text};
-
-   position: relative;
 `;
 
 const Container = styled.article`
    width: 75%;
+   max-width: 1300px;
    min-height: 100vh;
    padding-top: 2rem;
    padding-bottom: 2rem;
@@ -57,6 +56,8 @@ const Container = styled.article`
    display: flex;
    justify-content: center;
    align-items: center;
+
+   position: relative;
 `;
 
 const Title = styled.h2`
@@ -65,7 +66,7 @@ const Title = styled.h2`
 
    position: absolute;
    top: 5rem;
-   left: 5%;
+   left: 0;
    /* z-index: 1; */
 `;
 

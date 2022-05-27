@@ -23,19 +23,21 @@ const Banner = () => {
             <img width={500} height={400} src={img6} alt="The Weirdos" />
          </OilPictures>
 
-         <Title>
-            Únete a <br /> la comunidad
-         </Title>
+         <div className="cap-width">
+            <Title>
+               Únete a <br /> la comunidad
+            </Title>
 
-         <ButtonDiv>
-            <Button
-               useTheme="light"
-               text="Únete"
-               link="/"
-               fontSize="2rem"
-               padding="1.3rem 3rem"
-            />
-         </ButtonDiv>
+            <ButtonDiv>
+               <Button
+                  useTheme="light"
+                  text="Únete"
+                  link="/"
+                  fontSize="2rem"
+                  padding="1.3rem 3rem"
+               />
+            </ButtonDiv>
+         </div>
       </Wrapper>
    );
 };
@@ -55,6 +57,16 @@ const Wrapper = styled.section`
    align-items: center;
 
    overflow: hidden;
+
+   .cap-width {
+      width: 100%;
+      max-width: 1300px;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
 
    @media (max-width: 48em) {
       height: 15rem;
@@ -92,7 +104,7 @@ const Title = styled.h2`
    color: ${props => props.theme.body};
    padding: 1rem 2rem;
    z-index: 10;
-   width: 35%;
+   width: 70%;
    text-transform: capitalize;
 
    text-shadow: 1px 1px 2px ${props => props.theme.text};
@@ -100,7 +112,7 @@ const Title = styled.h2`
    @media (max-width: 64em) {
       font-size: ${props => props.theme.fSizeTitle};
       text-align: center;
-      width: 40%;
+      /* width: 40%; */
    }
    @media (max-width: 48em) {
       font-size: ${props => props.theme.fSizeNormal};
@@ -111,6 +123,7 @@ const Title = styled.h2`
 `;
 
 const ButtonDiv = styled.div`
+   width: 30%;
    margin-top: 2rem;
    text-align: center;
 `;
