@@ -3,7 +3,7 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme } from '../styles/Themes';
 
-// import Slider from '../components/hone/Slider';
+import Slider from '../components/hone/Slider';
 import TypeWriter from '../components/hone/TypeWriter';
 import HeroImages from '../components/hone/HeroImages';
 

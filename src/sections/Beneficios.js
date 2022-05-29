@@ -8,6 +8,7 @@ import mejora from '../assets/images/mejora.jpg';
 import purifica from '../assets/images/purifica.jpg';
 import realza from '../assets/images/realza.jpg';
 
+import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -67,42 +68,89 @@ const About = () => {
             <SlidesWrapper ref={horizontalRef}>
                <Slide className="panel" ref={oneSlide}>
                   <div className="cap-width">
-                     <div className="left">
+                     <motion.div
+                        className="left"
+                        initial={{ filter: 'grayscale(100%)' }}
+                        whileInView={{ filter: 'grayscale(0%)' }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 'all' }}
+                     >
                         <img className="img" src={mejora} alt="mejora" />
-                     </div>
+                     </motion.div>
 
                      <div className="right">
-                        <div className="title">Mejora Tu Bienestar Físico</div>
+                        <motion.div
+                           className="title"
+                           initial={{ opacity: 0 }}
+                           whileInView={{ opacity: 1 }}
+                           transition={{ duration: 1.5 }}
+                           viewport={{ once: false, amount: 'all' }}
+                        >
+                           Mejora Tu Bienestar Físico
+                        </motion.div>
 
-                        <p className="text">
+                        <motion.p
+                           className="text"
+                           initial={{ opacity: 0 }}
+                           whileInView={{ opacity: 1 }}
+                           transition={{ duration: 1.5 }}
+                           viewport={{ once: false, amount: 'all' }}
+                        >
                            <span className="firstLetter">L</span>os estilos de
                            vida modernos no siempre favorecen las condiciones
                            óptimas para el bienestar físico. Una dieta
                            deficiente, la falta de ejercicio y una saturación de
                            tóxicos ambientales pueden dejar el cuerpo
                            desequilibrado y disminuir los niveles de energía.
-                        </p>
-                        <p className="text">
+                        </motion.p>
+
+                        <motion.p
+                           className="text"
+                           initial={{ opacity: 0 }}
+                           whileInView={{ opacity: 1 }}
+                           transition={{ duration: 1.5, delay: 0.3 }}
+                           viewport={{ once: false, amount: 'all' }}
+                        >
                            Desde el control del peso hasta el soporte de
                            suplementos, nuestros aceites esenciales y productos
                            enriquecidos con aceites esenciales pueden
                            proporcionar las soluciones específicas que necesitas
                            para restablecer el equilibrio y sentirte mejor.
-                        </p>
+                        </motion.p>
                      </div>
                   </div>
                </Slide>
 
                <Slide className="panel">
                   <div className="cap-width">
-                     <div className="left">
+                     <motion.div
+                        className="left"
+                        initial={{ filter: 'grayscale(100%)' }}
+                        whileInView={{ filter: 'grayscale(0%)' }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 'all' }}
+                     >
                         <img className="img" src={purifica} alt="purifica" />
-                     </div>
+                     </motion.div>
 
                      <div className="right">
-                        <div className="title">Purifica tu hogar</div>
+                        <motion.div
+                           className="title"
+                           initial={{ opacity: 0 }}
+                           whileInView={{ opacity: 1 }}
+                           transition={{ duration: 1.5 }}
+                           viewport={{ once: false, amount: 0.3 }}
+                        >
+                           Purifica tu hogar
+                        </motion.div>
 
-                        <p className="text">
+                        <motion.p
+                           className="text"
+                           initial={{ opacity: 0 }}
+                           whileInView={{ opacity: 1 }}
+                           transition={{ duration: 1.5 }}
+                           viewport={{ once: false, amount: 0.3 }}
+                        >
                            <span className="firstLetter">L</span>os productos
                            que usamos en nuestros hogares impactan nuestra salud
                            y bienestar. El compromiso de Young Living con los
@@ -111,26 +159,53 @@ const About = () => {
                            el cuidado personal y otros artículos para el hogar
                            formulados sin el uso de químicos dañinos que se
                            encuentran en muchos productos tradicionales.
-                        </p>
-                        <p className="text">
+                        </motion.p>
+
+                        <motion.p
+                           className="text"
+                           initial={{ opacity: 0 }}
+                           whileInView={{ opacity: 1 }}
+                           transition={{ duration: 1.5, delay: 0.3 }}
+                           viewport={{ once: false, amount: 0.3 }}
+                        >
                            Nos apasiona usar solo los mejores ingredientes que
                            son buenos para la salud y responsables con el medio
                            ambiente, y a la misma vez efectivos.
-                        </p>
+                        </motion.p>
                      </div>
                   </div>
                </Slide>
 
                <Slide className="panel">
                   <div className="cap-width">
-                     <div className="left">
+                     <motion.div
+                        className="left"
+                        initial={{ filter: 'grayscale(100%)' }}
+                        whileInView={{ filter: 'grayscale(0%)' }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: false, amount: 'all' }}
+                     >
                         <img className="img" src={realza} alt="realza" />
-                     </div>
+                     </motion.div>
 
                      <div className="right">
-                        <div className="title">Realza tu rutina de belleza</div>
+                        <motion.div
+                           className="title"
+                           initial={{ opacity: 0 }}
+                           whileInView={{ opacity: 1 }}
+                           transition={{ duration: 1.5 }}
+                           viewport={{ once: false, amount: 0.3 }}
+                        >
+                           Realza tu rutina de belleza
+                        </motion.div>
 
-                        <p className="text">
+                        <motion.p
+                           className="text"
+                           initial={{ opacity: 0 }}
+                           whileInView={{ opacity: 1 }}
+                           transition={{ duration: 1.5 }}
+                           viewport={{ once: false, amount: 0.3 }}
+                        >
                            <span className="firstLetter">E</span>limina los
                            ingredientes agresivos de tus productos de cuidado
                            personal y deja que tu belleza brille. ¡Te enamorarás
@@ -139,13 +214,19 @@ const About = () => {
                            hidratación y te dan ese brillo juvenil! ¡Los aceites
                            esenciales incluso pueden ayudar a que tu cabello se
                            vea fabuloso!
-                        </p>
-                        <p className="text">
+                        </motion.p>
+                        <motion.p
+                           className="text"
+                           initial={{ opacity: 0 }}
+                           whileInView={{ opacity: 1 }}
+                           transition={{ duration: 1.5, delay: 0.3 }}
+                           viewport={{ once: false, amount: 0.3 }}
+                        >
                            Utilizando ingredientes de origen natural, nuestras
                            soluciones avanzadas para el cuidado de la piel y el
                            cabello facilitan el disfrute de los hermosos
                            beneficios de los aceites esenciales todos los días.
-                        </p>
+                        </motion.p>
                      </div>
                   </div>
                </Slide>
@@ -184,6 +265,8 @@ const Slide = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+
+      overflow: hidden;
 
       @media screen and (max-width: 900px) {
          display: none;

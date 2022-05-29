@@ -1,27 +1,56 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Content = ({ thecontent, useTheme }) => {
    const { id, title, img, svg, desc2 } = thecontent;
 
    return (
       <Slide className="panel" useTheme={useTheme}>
-         <div className="left">
+         <motion.div
+            className="left"
+            initial={{ filter: 'grayscale(100%)' }}
+            whileInView={{ filter: 'grayscale(0%)' }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false, amount: 'all' }}
+         >
             <img className="img" src={img} alt="mejora" />
-         </div>
+         </motion.div>
 
          <div className="right">
             <div className="title-wrapper">
-               <div className="title">{title}</div>
+               <motion.div
+                  className="title"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1.5 }}
+                  viewport={{ once: false, amount: 'all' }}
+               >
+                  {title}
+               </motion.div>
 
-               <span className="service-icon">{svg}</span>
+               <motion.span
+                  className="service-icon"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1.5, delay: 0.3 }}
+                  viewport={{ once: false, amount: 'all' }}
+               >
+                  {svg}
+               </motion.span>
             </div>
 
-            <p className="text">
+            <motion.p
+               className="text"
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+               transition={{ duration: 1.5 }}
+               viewport={{ once: false, amount: 0.7 }}
+            >
                <span className="firstLetter">{desc2.charAt(0)}</span>
                {desc2.substring(1)}
-            </p>
+            </motion.p>
          </div>
       </Slide>
    );

@@ -1,5 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import styled, { ThemeProvider } from 'styled-components';
+
 import { lightTheme } from '../styles/Themes';
 
 import img from '../assets/images/fondo-what-are.jpg';
@@ -7,11 +9,30 @@ import img from '../assets/images/fondo-what-are.jpg';
 const WhatAre = () => {
    return (
       <ThemeProvider theme={lightTheme}>
-         <Wrapper id="what-are" className="section">
+         <Wrapper
+            id="what-are"
+            className="section"
+            initial={{ filter: 'grayscale(100%)' }}
+            whileInView={{ filter: 'grayscale(0%)' }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false, amount: 0.85 }}
+         >
             <Container>
-               <Title>¿Qué son los aceites esenciales?</Title>
+               <Title
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1.5 }}
+                  viewport={{ once: false, amount: 'all' }}
+               >
+                  ¿Qué son los aceites esenciales?
+               </Title>
 
-               <Text>
+               <Text
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1.5 }}
+                  viewport={{ once: false, amount: 0.3 }}
+               >
                   <span className="firstLetter">L</span>os aceites esenciales
                   son extractos vegetales concentrados cosechados de plantas,
                   hierbas y árboles que luego se destilan a vapor o se prensan
@@ -37,7 +58,7 @@ const WhatAre = () => {
 
 export default WhatAre;
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
    color: ${props => props.theme.text};
 
    background-image: linear-gradient(
@@ -66,14 +87,14 @@ const Container = styled.article`
    position: relative;
 `;
 
-const Title = styled.h2`
+const Title = styled(motion.h2)`
    font-family: ${props => props.theme.ffTitle};
    font-size: ${props => props.theme.fSizeBanner};
 
    align-self: flex-start;
 `;
 
-const Text = styled.div`
+const Text = styled(motion.div)`
    width: 75%;
    font-size: ${props => props.theme.fSizeNormal};
    background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.6)`};

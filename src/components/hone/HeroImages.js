@@ -28,6 +28,7 @@ const HeroImages = () => {
             oil.firstElementChild,
             {
                scale: 1.6,
+               filter: 'grayscale(100%)',
                ease: 'power2',
                duration: 1.2,
             },
@@ -46,6 +47,7 @@ const HeroImages = () => {
             girl.firstElementChild,
             {
                scale: 1.6,
+               filter: 'grayscale(100%)',
                ease: 'power2',
                duration: 1.2,
             },

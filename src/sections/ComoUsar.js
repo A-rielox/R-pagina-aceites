@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { motion } from 'framer-motion';
+
 import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme } from '../styles/Themes';
 
@@ -12,15 +14,34 @@ const Showcase = () => {
       <ThemeProvider theme={lightTheme}>
          <Wrapper id="showcase" className="section">
             <Container className="CONTAINER">
-               <Title>¿Cómo usar los aceites esenciales?</Title>
+               <Title
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1.5 }}
+                  viewport={{ once: false, amount: 'all' }}
+               >
+                  ¿Cómo usar los aceites esenciales?
+               </Title>
 
                <Content className="CONTENT">
-                  <Left className="LEFT">
+                  <Left
+                     className="LEFT"
+                     initial={{ filter: 'grayscale(100%)' }}
+                     whileInView={{ filter: 'grayscale(0%)' }}
+                     transition={{ duration: 0.5 }}
+                     viewport={{ once: false, amount: 'all' }}
+                  >
                      <img className="img" src={comoUsar} alt="comoUsar" />
                   </Left>
 
                   <Right className="RIGHT">
-                     <Text className="TEXT--WRIGHT">
+                     <Text
+                        className="TEXT--WRIGHT"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1.5 }}
+                        viewport={{ once: false, amount: 'all' }}
+                     >
                         <span className="firstLetter">C</span>on tantos aceites
                         esenciales a su alcance que tienen tantos usos posibles,
                         seguramente se preguntará cómo usarlos todos. No se
@@ -28,11 +49,17 @@ const Showcase = () => {
                         poco tiempo!
                      </Text>
 
-                     <div className="cards-wrapper">
+                     <motion.div
+                        className="cards-wrapper"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1.5 }}
+                        viewport={{ once: false, amount: 0.7 }}
+                     >
                         {content.map(card => {
                            return <Card cardContent={card} key={card.id} />;
                         })}
-                     </div>
+                     </motion.div>
                   </Right>
                </Content>
             </Container>
@@ -63,7 +90,7 @@ const Container = styled.article`
    position: relative;
 `;
 
-const Title = styled.h2`
+const Title = styled(motion.h2)`
    font-family: ${props => props.theme.ffTitle};
    font-size: ${props => props.theme.fSizeBanner};
 
@@ -79,7 +106,7 @@ const Content = styled.div`
    }
 `;
 
-const Left = styled.div`
+const Left = styled(motion.div)`
    width: 50%;
 
    @media screen and (max-width: 1100px) {
@@ -125,7 +152,7 @@ const Right = styled.div`
    }
 `;
 
-const Text = styled.div`
+const Text = styled(motion.div)`
    width: 100%;
    font-size: ${props => props.theme.fSizeNormal};
    background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.6)`};
