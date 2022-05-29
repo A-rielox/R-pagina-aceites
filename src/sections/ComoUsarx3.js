@@ -22,6 +22,7 @@ const Faq = () => {
       let slide3 = slide3Ref.current;
 
       let t2 = gsap.timeline();
+      // sin el timeOut se para antes de entrar en la seccion
       setTimeout(() => {
          t2.to(slide1, {
             scrollTrigger: {
