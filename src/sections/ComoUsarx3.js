@@ -94,7 +94,6 @@ const Faq = () => {
 };
 
 export default Faq;
-/* max-width: 1300px; */
 
 const Wrapper = styled.div`
    flex-direction: column;

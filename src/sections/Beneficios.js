@@ -20,6 +20,9 @@ const Beneficios = ({ ancho }) => {
    const oneSlide = useRef(null);
 
    useLayoutEffect(() => {
+      const mq = window.matchMedia('(min-width: 900px)').matches;
+      console.log(mq);
+
       let element = ref.current;
       let scrollingElement = horizontalRef.current;
       let oneSlideElement = oneSlide.current;
@@ -29,49 +32,50 @@ const Beneficios = ({ ancho }) => {
 
       let t1 = gsap.timeline();
 
-      setTimeout(() => {
-         t1.to(element, {
-            scrollTrigger: {
-               trigger: element,
-               start: 'top top',
-               end: pinWrapWidth,
-               scrub: true,
-               pin: true,
-               pinSpacing: true,
-               // markers: true,
-            },
+      if (mq) {
+         setTimeout(() => {
+            t1.to(element, {
+               scrollTrigger: {
+                  trigger: element,
+                  start: 'top top',
+                  end: pinWrapWidth,
+                  scrub: true,
+                  pin: true,
+                  pinSpacing: true,
+                  // markers: true,
+               },
 
-            height: `${pinWrapWidth}px`,
-            ease: 'none',
-         });
+               height: `${pinWrapWidth}px`,
+               ease: 'none',
+            });
 
-         // Horizontal Scrolling
-         t1.to(scrollingElement, {
-            scrollTrigger: {
-               trigger: scrollingElement,
-               start: 'top top',
-               end: pinWrapWidth,
-               scrub: true,
-               // markers:true,
-            },
-            x: -twoSlides,
-            ease: 'none',
-         });
+            // Horizontal Scrolling
+            t1.to(scrollingElement, {
+               scrollTrigger: {
+                  trigger: scrollingElement,
+                  start: 'top top',
+                  end: pinWrapWidth,
+                  scrub: true,
+                  // markers:true,
+               },
+               x: -twoSlides,
+               ease: 'none',
+            });
 
-         ScrollTrigger.refresh();
-      }, 1000);
+            ScrollTrigger.refresh();
+         }, 1000);
+      }
 
       return () => {
          // Let's clear instances
          t1.kill();
-         ScrollTrigger.kill();
       };
    }, []);
 
    return (
       <ThemeProvider theme={DarkTheme}>
          <Wrapper id="about" ref={ref}>
-            <SlidesWrapper ref={horizontalRef}>
+            <SlidesWrapper ref={horizontalRef} className="SLIDES----WRAPPER">
                <Slide className="panel" ref={oneSlide}>
                   <div className="cap-width">
                      <motion.div
@@ -256,6 +260,10 @@ const Slide = styled.div`
 
    padding: 5rem;
 
+   @media screen and (max-width: 500px) {
+      padding: 0.5rem;
+   }
+
    .cap-width {
       max-width: 1300px;
       margin: 0 auto;
@@ -358,9 +366,6 @@ const SlidesWrapper = styled.div`
    justify-content: flex-start;
    align-items: center;
    padding-right: 20rem;
-
-   @media screen and (max-width: 900px) {
-   }
 
    @media screen and (max-width: 900px) {
       display: block;

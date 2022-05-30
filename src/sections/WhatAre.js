@@ -85,6 +85,10 @@ const Container = styled.article`
    align-items: center;
 
    position: relative;
+
+   @media screen and (max-width: 600px) {
+      width: 90%;
+   }
 `;
 
 const Title = styled(motion.h2)`

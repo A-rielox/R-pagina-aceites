@@ -95,6 +95,9 @@ const Slide = styled.div`
       @media screen and (min-width: 1100px) {
          padding-left: 4rem;
       }
+      @media screen and (max-width: 500px) {
+         width: 90%;
+      }
    }
 
    .title-wrapper {
@@ -113,12 +116,26 @@ const Slide = styled.div`
       border-radius: 50%;
       opacity: 0.3;
 
+      @media screen and (max-width: 500px) {
+         padding: 0.5rem;
+
+         background: ${props =>
+            props.useTheme === 'dark'
+               ? `rgba(${props.theme.textRgba},0.4)`
+               : `rgba(${props.theme.bodyRgba},0.4)`};
+      }
+
       svg {
          fill: ${props =>
             props.useTheme === 'dark' ? props.theme.body : props.theme.text};
          width: 60px;
          height: 60px;
          opacity: 0.3;
+
+         @media screen and (max-width: 500px) {
+            width: 30px;
+            height: 30px;
+         }
       }
    }
 
@@ -127,6 +144,10 @@ const Slide = styled.div`
       font-size: ${props => props.theme.fSizeBanner};
 
       margin-left: 2rem;
+
+      @media screen and (max-width: 500px) {
+         margin-left: 0.5rem;
+      }
    }
 
    .text {

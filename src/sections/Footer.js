@@ -126,6 +126,12 @@ const Menu = styled.ul`
    @media screen and (max-width: 600px) {
       flex-wrap: wrap;
    }
+
+   @media screen and (max-width: 500px) {
+      flex-direction: column;
+      justify-content: center;
+      justify-content: center;
+   }
 `;
 
 const MenuLink = styled.li`

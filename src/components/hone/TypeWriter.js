@@ -16,7 +16,7 @@ const TypeWriter = () => {
       tl2.to('.text-wrapper, .button-div', { visibility: 'visible' })
          .from(
             [titleRef.children, typeWriterRef.children, subTitleRef.children],
-            { y: 100, ease: 'power2', duration: 1, stagger: 0.4 }
+            { y: 120, ease: 'power2', duration: 1, stagger: 0.4 }
          )
          .from(
             buttonRef,

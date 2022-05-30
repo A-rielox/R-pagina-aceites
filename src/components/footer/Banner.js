@@ -77,7 +77,7 @@ const Wrapper = styled.section`
    }
 
    @media screen and (max-width: 600px) {
-      height: 15rem;
+      height: 30vh;
       flex-direction: column;
    }
 `;
@@ -117,13 +117,13 @@ const Title = styled.h2`
 
    text-shadow: 1px 1px 2px ${props => props.theme.text};
 
-   @media screen and (max-width: 900) {
+   @media screen and (max-width: 900px) {
       font-size: ${props => props.theme.fSizeTitle};
       text-align: center;
       /* width: 40%; */
    }
-   @media screen and (max-width: 600) {
-      font-size: ${props => props.theme.fSizeNormal};
+   @media screen and (max-width: 600px) {
+      font-size: ${props => props.theme.fSizeTitle};
       padding: 2rem 0;
 
       width: 100%;
@@ -135,6 +135,8 @@ const ButtonDiv = styled.div`
    margin-top: 2rem;
    text-align: center;
 
-   @media screen and (max-width: 900) {
+   @media screen and (max-width: 600px) {
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
    }
 `;

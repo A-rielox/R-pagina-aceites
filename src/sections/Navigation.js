@@ -158,6 +158,10 @@ const Navbar = styled.nav`
       justify-content: center;
    }
 
+   @media screen and (max-width: 600px) {
+      width: 95%;
+   }
+
    .element-wrapper {
       overflow: hidden;
 
@@ -176,6 +180,11 @@ const Menu = styled.ul`
    display: flex;
    justify-content: space-between;
    align-items: center;
+
+   @media screen and (max-width: 900px) {
+      width: 100%;
+      padding: 0 0.5rem;
+   }
 `;
 
 const MenuLink = styled.li`
@@ -190,6 +199,10 @@ const MenuLink = styled.li`
    @media screen and (max-width: 900px) {
       margin: 0 0.2rem;
       padding: 0.5rem;
+   }
+
+   @media screen and (max-width: 600px) {
+      font-size: 0.7rem;
    }
 
    &::after {
