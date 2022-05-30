@@ -28,11 +28,16 @@ const Footer = () => {
                </Left>
 
                <Menu className="MENU">
-                  <MenuLink onClick={() => goTo('navigation')}>Home</MenuLink>
-                  <MenuLink onClick={() => goTo('about')}>About</MenuLink>
-                  <MenuLink onClick={() => goTo('showcase')}>Showcase</MenuLink>
-                  <MenuLink onClick={() => goTo('faq')}>FAQ</MenuLink>
-                  <MenuLink onClick={() => goTo('footer')}>Footer</MenuLink>
+                  <MenuLink onClick={() => goTo('navigation')}>
+                     Presentación
+                  </MenuLink>
+                  <MenuLink onClick={() => goTo('what-are')}>
+                     ¿Qué son?
+                  </MenuLink>
+                  <MenuLink onClick={() => goTo('about')}>Beneficios</MenuLink>
+                  <MenuLink onClick={() => goTo('showcase')}>Usos</MenuLink>
+                  {/* <MenuLink onClick={() => goTo('faq')}>FAQ</MenuLink> */}
+                  {/* <MenuLink onClick={() => goTo('footer')}>Footer</MenuLink> */}
                </Menu>
             </Container>
 

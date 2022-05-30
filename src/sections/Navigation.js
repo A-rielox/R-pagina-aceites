@@ -7,55 +7,54 @@ import styled, { ThemeProvider, keyframes } from 'styled-components';
 import { lightTheme } from '../styles/Themes';
 
 const Navigation = () => {
+   let navRef = useRef(null);
    let logoRef = useRef(null);
    let elementRef1 = useRef(null);
    let elementRef2 = useRef(null);
    let elementRef3 = useRef(null);
    let elementRef4 = useRef(null);
-   let elementRef5 = useRef(null);
 
    let tl3 = gsap.timeline();
 
    useEffect(() => {
-      tl3.to('.nav', { visibility: 'visible' }, 0.5)
-         .from(
+      tl3.to(navRef, { visibility: 'visible' })
+         .to(
             logoRef,
             {
-               x: -150,
+               left: 0,
                ease: 'power2',
                duration: 0.3,
             },
             'Start'
          )
-         .from(
+         .to(
             elementRef1,
             {
-               x: -150,
+               left: 0,
                ease: 'power2',
                duration: 0.3,
             },
             'Start'
          )
-         .from(elementRef2, {
-            x: -150,
+         .to(elementRef2, {
+            left: 0,
             ease: 'power2',
             duration: 0.3,
          })
-         .from(elementRef3, {
-            x: -150,
+         .to(elementRef3, {
+            left: 0,
             ease: 'power2',
             duration: 0.3,
          })
-         .from(elementRef4, {
-            x: -150,
-            ease: 'power2',
-            duration: 0.3,
-         })
-         .from(elementRef5, {
-            x: -150,
+         .to(elementRef4, {
+            left: 0,
             ease: 'power2',
             duration: 0.3,
          });
+
+      return () => {
+         tl3.kill();
+      };
    }, []);
 
    const goTo = id => {
@@ -71,7 +70,7 @@ const Navigation = () => {
    return (
       <ThemeProvider theme={lightTheme}>
          <Section id="navigation">
-            <Navbar className="nav">
+            <Navbar ref={el => (navRef = el)}>
                <div className="element-wrapper">
                   <div className="logo" ref={el => (logoRef = el)}>
                      <Logo />
@@ -81,10 +80,10 @@ const Navigation = () => {
                <Menu>
                   <div className="element-wrapper">
                      <MenuLink
-                        onClick={() => goTo('home')}
+                        onClick={() => goTo('what-are')}
                         ref={el => (elementRef1 = el)}
                      >
-                        Home
+                        ¿Qué son?
                      </MenuLink>
                   </div>
 
@@ -93,7 +92,7 @@ const Navigation = () => {
                         onClick={() => goTo('about')}
                         ref={el => (elementRef2 = el)}
                      >
-                        About
+                        Beneficios
                      </MenuLink>
                   </div>
 
@@ -102,23 +101,14 @@ const Navigation = () => {
                         onClick={() => goTo('showcase')}
                         ref={el => (elementRef3 = el)}
                      >
-                        Showcase
-                     </MenuLink>
-                  </div>
-
-                  <div className="element-wrapper">
-                     <MenuLink
-                        onClick={() => goTo('faq')}
-                        ref={el => (elementRef4 = el)}
-                     >
-                        FAQ
+                        Usos
                      </MenuLink>
                   </div>
 
                   <div className="element-wrapper">
                      <MenuLink
                         onClick={() => goTo('footer')}
-                        ref={el => (elementRef5 = el)}
+                        ref={el => (elementRef4 = el)}
                      >
                         Footer
                      </MenuLink>
@@ -150,12 +140,11 @@ const fill = keyframes`
 const Section = styled.section`
    background-color: ${props => props.theme.body};
    color: ${props => props.theme.text};
-   .nav {
-      visibility: hidden;
-   }
 `;
 
 const Navbar = styled.nav`
+   visibility: hidden;
+
    width: 85%;
    max-width: 1300px;
    margin: 0 auto;
@@ -165,8 +154,21 @@ const Navbar = styled.nav`
    justify-content: space-between;
    align-items: center;
 
+   @media screen and (max-width: 900px) {
+      justify-content: center;
+   }
+
    .element-wrapper {
       overflow: hidden;
+
+      .logo {
+         position: relative;
+         left: -150px;
+
+         @media screen and (max-width: 900px) {
+            display: none;
+         }
+      }
    }
 `;
 
@@ -181,6 +183,7 @@ const MenuLink = styled.li`
    margin: 0 0.5rem;
    font-size: 1rem;
    position: relative;
+   left: -150px;
    transition: ${props => props.theme.transition} 0.25s;
    padding: 1rem;
 

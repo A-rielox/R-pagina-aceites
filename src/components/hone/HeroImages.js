@@ -53,6 +53,10 @@ const HeroImages = () => {
             },
             1
          );
+
+      return () => {
+         tl1.kill();
+      };
    }, []);
 
    return (

@@ -23,6 +23,10 @@ const TypeWriter = () => {
             { x: -150, opacity: 0, ease: 'power2', duration: 1 },
             1
          );
+
+      return () => {
+         tl2.kill();
+      };
    }, []);
 
    return (

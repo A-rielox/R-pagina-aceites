@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from 'react';
+import React, { useRef, useLayoutEffect, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { DarkTheme } from '../styles/Themes';
 
@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const About = () => {
+const Beneficios = ({ ancho }) => {
    gsap.registerPlugin(ScrollTrigger);
 
    const ref = useRef(null);
@@ -60,6 +60,12 @@ const About = () => {
 
          ScrollTrigger.refresh();
       }, 1000);
+
+      return () => {
+         // Let's clear instances
+         t1.kill();
+         ScrollTrigger.kill();
+      };
    }, []);
 
    return (
@@ -121,7 +127,7 @@ const About = () => {
                   </div>
                </Slide>
 
-               <Slide className="panel">
+               <Slide className="panel slide2">
                   <div className="cap-width">
                      <motion.div
                         className="left"
@@ -236,7 +242,7 @@ const About = () => {
    );
 };
 
-export default About;
+export default Beneficios;
 
 /* max-width: 1300px; */
 
@@ -352,4 +358,17 @@ const SlidesWrapper = styled.div`
    justify-content: flex-start;
    align-items: center;
    padding-right: 20rem;
+
+   @media screen and (max-width: 900px) {
+   }
+
+   @media screen and (max-width: 900px) {
+      display: block;
+      justify-content: center;
+
+      .slide2 {
+         background-color: ${props => props.theme.text};
+         color: ${props => props.theme.body};
+      }
+   }
 `;

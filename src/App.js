@@ -16,10 +16,6 @@ function App() {
       };
    }, []);
 
-   useEffect(() => {
-      console.log(ancho);
-   }, [ancho]);
-
    return (
       <div>
          <GlobalStyles />
@@ -28,7 +24,7 @@ function App() {
             <Navigation />
             <Home />
             <WhatAre />
-            <Beneficios />
+            <Beneficios ancho={ancho} />
             <ComoUsar />
             <ComoUsarx3 />
             <Footer />

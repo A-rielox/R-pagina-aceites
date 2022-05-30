@@ -62,6 +62,10 @@ const Faq = () => {
 
          ScrollTrigger.refresh();
       }, 1000);
+
+      return () => {
+         t2.kill();
+      };
    }, []);
 
    return (
